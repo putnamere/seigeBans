@@ -76,7 +76,7 @@ const getStats = () => {
     showLoading()
     let names = []
     document.querySelectorAll("input").forEach((input, i) => names.push([input.value, isXbox[i]]))
-    fetch(JSON['parse'](aSdFoIbG(iFguGmY1Fg('ImFtYXppbmdseS1oZWxwZnVsLXdlcmV3b2xmLm5ncm9rLWZyZWUuYXBwL2dldFBsYXllcnMi'))), {
+    fetch(JSON['parse'](aSdFoIbG(iFguGmY1Fg('Imh0dHBzOi8vYW1hemluZ2x5LWhlbHBmdWwtd2VyZXdvbGYubmdyb2stZnJlZS5hcHAvZ2V0UGxheWVycyI'))), {
         method: "POST", 
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ players: names }) 
