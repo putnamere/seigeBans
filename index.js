@@ -27,20 +27,29 @@ const hideSearch = () => {
     document.querySelector('.wrapper').style.display = 'none'
     document.querySelector('.playerStats').style = ''
     document.querySelector('.loading').style.display = 'none'
+    document.querySelector('.error').style.display = 'none'
 }
 const showSearch = () => {
     document.querySelector('.wrapper').style = ''
     document.querySelector('.playerStats').style.display = 'none'
     document.querySelector('.loading').style.display = 'none'
+    document.querySelector('.error').style.display = 'none'
 }
 const showLoading = () => {
     document.querySelector('.wrapper').style.display = 'none'
     document.querySelector('.playerStats').style.display = 'none'
     document.querySelector('.loading').style = ''
+    document.querySelector('.error').style.display = 'none'
+}
+const showError = () => {
+    document.querySelector('.wrapper').style.display = 'none'
+    document.querySelector('.playerStats').style.display = 'none'
+    document.querySelector('.loading').style.display = 'none'
+    document.querySelector('.error').style = ''
 }
 
 showSearch()
-
+//showError()
 document.querySelectorAll(".platforms").forEach((platform, i) => {
     let xboxButton = platform.children[0] 
     let psButton = platform.children[1]
@@ -107,7 +116,6 @@ const getStats = () => {
             }
         })
     }).catch(err => {
-        console.log(err)
-        console.log("Server Not Up Rn")
+        showError()
     })
 }
