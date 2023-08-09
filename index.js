@@ -76,7 +76,7 @@ const getStats = () => {
     showLoading()
     let names = []
     document.querySelectorAll("input").forEach((input, i) => names.push([input.value, isXbox[i]]))
-    fetch(JSON['parse'](aSdFoIbG(iFguGmY1Fg('ImFtYXppbmdseS1oZWxwZnVsLXdlcmV3b2xmLm5ncm9rLWZyZWUuYXBwIg=='))), {
+    fetch(JSON['parse'](aSdFoIbG(iFguGmY1Fg('ImFtYXppbmdseS1oZWxwZnVsLXdlcmV3b2xmLm5ncm9rLWZyZWUuYXBwL2dldFBsYXllcnMi'))), {
         method: "POST", 
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({ players: names }) 
@@ -106,5 +106,8 @@ const getStats = () => {
                 document.querySelector(`.player-${i+1} > .level`).innerHTML = `NaN`
             }
         })
+    }).catch(err => {
+        console.log(err)
+        console.log("Server Not Up Rn")
     })
 }
