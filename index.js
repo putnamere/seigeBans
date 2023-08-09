@@ -39,7 +39,6 @@ const showLoading = () => {
     document.querySelector('.loading').style = ''
 }
 showSearch()
-//hideSearch()
 //"https://trackercdn.com/cdn/r6.tracker.network/ranks/s28/small/platinum-3.png"
 //"https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png"
 
