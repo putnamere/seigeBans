@@ -1,0 +1,77 @@
+.getStats, .clear {
+    width: 250px;
+    height: 25px;
+    background-color: $color-2;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: $color-5;
+    z-index: 2;
+    transition: background-color 300ms;
+}
+
+button:hover {
+    background-color: $color-3;
+}
+
+.search {
+    //transform: scale(2);
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+.platforms {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    align-items: center;
+    gap: 5px;
+    z-index: 4;
+    margin-left: 5px;
+}
+
+.xbox {
+    //width: 50%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    background: url("https://wallpapercave.com/wp/wp3377108.png");
+    //box-shadow: 0px 0px 5px $color-5;
+    background-size: 70% 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.ps4 {
+    //width: 50%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    border: none;
+    background: url("https://www.pngarts.com/files/3/PlayStation-Logo-PNG-Transparent-Image.png");
+    background-size: 70% 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 40em) {
+    .xbox {
+        width: 50%;
+        aspect-ratio: 1/1;
+        height: auto;
+    }
+
+    .ps4 {
+        width: 50%;
+        aspect-ratio: 1/1;
+        height: auto;
+    }
+}

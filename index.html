@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />  
+    <title>Seige Stats</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <img src="https://th.bing.com/th/id/R.ba03aab055b781b6767c5ba25513a323?rik=v01c0NigJjiudA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_587.png&ehk=F5woJ%2bsU7Svlh4n457DqZr9n%2fKjHmgK5yPwLVsNJtj8%3d&risl=&pid=ImgRaw&r=0" alt="" class="search">
+    <div class="wrapper">
+      <h1 class="header">Seige Stats</h1>
+        <div class="inputDiv" spellcheck="false">
+          <div class="platforms">
+            <button class="xbox"></button>
+            <button class="ps4"></button>
+          </div>
+            <input type="text" placeholder="Player Name">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="inputDiv" spellcheck="false">
+          <div class="platforms">
+            <button class="xbox"></button>
+            <button class="ps4"></button>
+          </div>
+          <input type="text" placeholder="Player Name">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="inputDiv" spellcheck="false">
+          <div class="platforms">
+            <button class="xbox"></button>
+            <button class="ps4"></button>
+          </div>
+          <input type="text" placeholder="Player Name">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="inputDiv" spellcheck="false">
+          <div class="platforms">
+            <button class="xbox"></button>
+            <button class="ps4"></button>
+          </div>
+          <input type="text" placeholder="Player Name">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="inputDiv" spellcheck="false">
+          <div class="platforms">
+            <button class="xbox"></button>
+            <button class="ps4"></button>
+          </div>
+          <input type="text" placeholder="Player Name">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="background"></div>
+
+        <button onclick="getStats()" class="getStats">Get Stats</button>
+        <button onclick="clearNames()" class="clear">Clear Names</button>
+    </div>
+
+    <div class="loading">
+      <div class="background"></div>
+      <img src="https://cdn2.iconfinder.com/data/icons/flaticons-stroke/16/loading-3-512.png" alt="" class="loadingImg">
+    </div>
+
+    <div class="playerStats">
+      <div class="background"></div>
+
+      <div class="header player">
+        <p class="text">RANK&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="name text"> NAME&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="text">OPERATORS&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="kd text">KD&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="ltk text">LTK&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="hsp text">HSP&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="level text">LEVEL</p>
+      </div>
+
+      <div class="player-1 player">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/ranks/s28/small/platinum-3.png" alt="null" class="rank">
+        <p class="break">|&nbsp;</p>
+        <p class="name text">FCLPutnamere&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op1 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op2 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op3 op">
+        <p class="break">|&nbsp;</p>
+        <p class="kd text">1.23&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="ltk text">3454&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="hsp text">54.6%</p>
+        <p class="break">|&nbsp;</p>
+        <p class="level text">LEVEL</p>
+      </div>
+
+      <div class="player-2 player">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/ranks/s28/small/platinum-3.png" alt="null" class="rank">
+        <p class="break">|&nbsp;</p>
+        <p class="name text">FCLPutnamere&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op1 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op2 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op3 op">
+        <p class="break">|&nbsp;</p>
+        <p class="kd text">1.23&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="ltk text">3454&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="hsp text">54.6%</p>
+        <p class="break">|&nbsp;</p>
+        <p class="level text">LEVEL</p>
+      </div>
+
+      <div class="player-3 player">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/ranks/s28/small/platinum-3.png" alt="null" class="rank">
+        <p class="break">|&nbsp;</p>
+        <p class="name text">FCLPutnamere&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op1 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op2 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op3 op">
+        <p class="break">|&nbsp;</p>
+        <p class="kd text">1.23&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="ltk text">3454&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="hsp text">54.6%</p>
+        <p class="break">|&nbsp;</p>
+        <p class="level text">LEVEL</p>
+      </div>
+
+      <div class="player-4 player">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/ranks/s28/small/platinum-3.png" alt="null" class="rank">
+        <p class="break">|&nbsp;</p>
+        <p class="name text">FCLPutnamere&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op1 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op2 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op3 op">
+        <p class="break">|&nbsp;</p>
+        <p class="kd text">1.23&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="ltk text">3454&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="hsp text">54.6%</p>
+        <p class="break">|&nbsp;</p>
+        <p class="level text">LEVEL</p>
+      </div>
+
+      <div class="player-5 player">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/ranks/s28/small/platinum-3.png" alt="null" class="rank">
+        <p class="break">|&nbsp;</p>
+        <p class="name text">FCLPutnamere&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op1 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op2 op">
+        <img src="https://trackercdn.com/cdn/r6.tracker.network/operators/badges/valkyrie.png" alt="null" class="op3 op">
+        <p class="break">|&nbsp;</p>
+        <p class="kd text">1.23&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="ltk text">3454&nbsp;</p>
+        <p class="break">|&nbsp;</p>
+        <p class="hsp text">54.6%</p>
+        <p class="break">|&nbsp;</p>
+        <p class="level text">LEVEL</p>
+      </div>
+    </div>
+  </body>  
+</html>

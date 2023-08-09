@@ -1,0 +1,118 @@
+input[type='text'] {
+    //width: clamp(400px, 900px, 900px);
+    width: 65vw;
+    height: clamp(50px, 40px, 35px);
+    background-color: rgba(65, 90, 119, 0.5);
+    border: none;
+    // border-radius: 5px;
+    padding-left: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: $color-5;
+}
+
+input[type='text']:focus {
+    outline: none;
+}
+
+.inputDiv {
+    width: 65vw;
+    //width: clamp(400px, 900px, 900px);
+    height: clamp(50px, 40px, 35px);
+    //height: 2vw;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+}
+
+.inputDiv > span:nth-child(2) {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, $color-4, $color-5);
+    animation: animate1 2s linear infinite;
+}
+
+.inputDiv:hover ~ .background {
+    background-size: 3vmin 3vmin;
+}
+
+.inputDiv > span:nth-child(3) {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, $color-4, $color-5);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+    transform: translateY(-100%);
+}
+
+.inputDiv > span:nth-child(4) {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to left, $color-4, $color-5);
+    animation: animate3 2s linear infinite;
+}
+
+.inputDiv > span:nth-child(5) {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to top, $color-4, $color-5);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+    transform: translateY(100%);
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}

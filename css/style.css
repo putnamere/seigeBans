@@ -1,0 +1,306 @@
+.getStats, .clear {
+  width: 250px;
+  height: 25px;
+  background-color: #1b263b;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #e0e1dd;
+  z-index: 2;
+  transition: background-color 300ms;
+}
+
+button:hover {
+  background-color: #415a77;
+}
+
+.search {
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+.platforms {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  align-items: center;
+  gap: 5px;
+  z-index: 4;
+  margin-left: 5px;
+}
+
+.xbox {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background: url("https://wallpapercave.com/wp/wp3377108.png");
+  background-size: 70% 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.ps4 {
+  height: 100%;
+  aspect-ratio: 1/1;
+  border: none;
+  background: url("https://www.pngarts.com/files/3/PlayStation-Logo-PNG-Transparent-Image.png");
+  background-size: 70% 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 40em) {
+  .xbox {
+    width: 50%;
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+  .ps4 {
+    width: 50%;
+    aspect-ratio: 1/1;
+    height: auto;
+  }
+}
+* {
+  font-family: Nunito;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0d1b2a;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  gap: 1rem;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(#415a77, transparent 8%);
+  background-position: center center;
+  background-size: 2.5vmin 2.5vmin;
+  transition: background-size 600ms ease-in-out;
+  z-index: -1;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle 200px at var(--mouse-x) var(--mouse-y), rgba(150, 150, 150, 0.16), transparent 40%);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  color: #e0e1dd;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+input[type=text] {
+  width: 65vw;
+  height: 50px;
+  background-color: rgba(65, 90, 119, 0.5);
+  border: none;
+  padding-left: 5px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: #e0e1dd;
+}
+
+input[type=text]:focus {
+  outline: none;
+}
+
+.inputDiv {
+  width: 65vw;
+  height: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.inputDiv > span:nth-child(2) {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #778da9, #e0e1dd);
+  animation: animate1 2s linear infinite;
+}
+
+.inputDiv:hover ~ .background {
+  background-size: 3vmin 3vmin;
+}
+
+.inputDiv > span:nth-child(3) {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #778da9, #e0e1dd);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+  transform: translateY(-100%);
+}
+
+.inputDiv > span:nth-child(4) {
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to left, #778da9, #e0e1dd);
+  animation: animate3 2s linear infinite;
+}
+
+.inputDiv > span:nth-child(5) {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to top, #778da9, #e0e1dd);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+  transform: translateY(100%);
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.playerStats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.rank {
+  width: 80px;
+  height: 80px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+}
+
+.player p {
+  font-size: 1.7rem;
+}
+
+.op {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .player p {
+    font-size: 0.7rem;
+  }
+  .op {
+    width: 20px;
+    height: 20px;
+    margin-right: 0px;
+  }
+  .rank {
+    width: 35px;
+    height: 35px;
+  }
+}
+.text {
+  color: #e0e1dd;
+}
+
+.break {
+  font-weight: bold;
+  color: #415a77;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingImg {
+  width: 100px;
+  height: 100px;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
